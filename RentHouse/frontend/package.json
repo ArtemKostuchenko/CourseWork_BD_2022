@@ -1,0 +1,30 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --watch-content-base --open",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "@types/node": "^18.0.0",
+    "axios": "^0.27.2",
+    "chartist": "^0.11.4",
+    "fs": "^0.0.1-security",
+    "fs-extra": "^10.1.0",
+    "multer": "^1.4.5-lts.1"
+  },
+  "compilerOptions": {
+    "types": [
+      "node"
+    ]
+  }
+}

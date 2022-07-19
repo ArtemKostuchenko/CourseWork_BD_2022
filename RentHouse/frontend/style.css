@@ -1,0 +1,799 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    height: 100vh;
+    font: 1.6rem Cambria;
+    margin: 0;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+input,
+button, select, textarea {
+    font: 1.6rem Cambria;
+    padding: 1rem;
+    border: 2px solid black;
+    border-radius: 0.5rem;
+}
+
+textarea {
+    resize: none;
+}
+
+input:hover,
+button:hover {
+    border: 2px solid deepskyblue;
+}
+
+button.primary {
+    background-color: gold;
+    width: 100%;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.overlay .active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.overlay > div {
+    background-color: white;
+    color: black;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    max-width: 40rem;
+}
+
+.overlay > div > * {
+    margin: 2rem;
+}
+
+.fw {
+    width: 100%;
+}
+
+.success {
+    color: green;
+}
+
+.error {
+    color: red;
+}
+
+a:hover {
+    color: deepskyblue;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+    'header'
+    'main'
+    'footer';
+    grid-template-columns: 1fr;
+    grid-template-rows: 5rem 1fr 4rem;
+    height: 100%;
+}
+
+header {
+    grid-area: header;
+    background-color: #221f1f;
+    color: aliceblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+header a {
+    color: aliceblue;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+header a:hover {
+    color: deepskyblue;
+}
+
+.nameWebSite a {
+    font-size: 3rem;
+}
+
+footer {
+    color: aliceblue;
+    background-color: #221f1f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.apartmentList {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+}
+
+.apartmentList li {
+    flex: 0 1 30rem;
+    margin: 1rem;
+    margin-bottom: 0;
+    height: 42rem; /*42rem*/
+    border-top: 0.2rem yellow solid;
+}
+
+.apartmentItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.apartmentItem img {
+    max-height: 26rem;
+    max-width: 22rem;
+    margin-top: 2rem;
+}
+
+.apartmentName {
+    line-height: 2.2rem;
+}
+
+.infoApartment {
+    font-size: 1.2rem;
+    color: burlywood;
+}
+
+.apartmentPrice {
+    font-size: 2rem;
+}
+
+/*Інфо квартири(будинка)*/
+
+.content {
+    padding: 1rem;
+}
+
+.details {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.details-images {
+    flex: 2 1 60rem;
+}
+
+.general-image img {
+    max-width: 60rem;
+    width: 100%;
+}
+
+.details-info {
+    flex: 1 1 60rem;
+}
+
+.details-action {
+    flex: 1 1 20rem;
+}
+
+.details-info ul,
+.details-action ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+.details-info h1 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.details-info li,
+.details-action li {
+    margin-bottom: 1rem;
+}
+
+.details-action {
+    border: 0.1rem solid gray;
+    background-color: #f8f8f8;
+    padding: 1rem;
+}
+
+.text-decription {
+    margin: 0.5rem;
+    border: 1px solid #bec4bb;
+}
+
+.text-decription > p {
+    text-align: center;
+}
+
+.property-apartments {
+    margin: 0.5rem;
+    padding: 1rem;
+    border: 1px solid #bec4bb;
+}
+
+.flex-property {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nameProperty {
+    color: gray;
+}
+
+.valueProperty {
+    color: deepskyblue;
+}
+
+.stars {
+    color: orange;
+}
+
+/*Оренди (оформлення)*/
+.rent {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.rentList {
+    flex: 3 1 60rem;
+}
+
+.rentAction {
+    flex: 1 1 20rem;
+    background-color: #f0f0f0;
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+.rentListContainer {
+    padding: 1rem;
+    list-style-type: none;
+}
+
+.rentListContainer li {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 0.1rem #f0f0f0 solid;
+}
+
+.rentListContainer img {
+    max-width: 10rem;
+    max-height: 10rem;
+}
+
+.rentListContainer li:first-child {
+    align-items: flex-end;
+}
+
+.rentImage {
+    flex: 1 1;
+}
+
+.rentName {
+    flex: 8 1;
+}
+
+.rentPrice {
+    flex: 2 1;
+    text-align: right;
+}
+
+.rentName > div {
+    padding: 1rem;
+}
+
+.rentList h3 {
+    margin: 0;
+}
+
+.rentList button {
+    font-size: 1.3rem;
+    padding: 0.5rem;
+    background-color: lightcoral;
+}
+
+/*Вхід і реєстрація*/
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.formItems {
+    display: flex;
+    flex-direction: column;
+    width: 32rem;
+    padding: 2rem;
+    border: 0.1rem lightgray solid;
+    border-radius: 0.5rem;
+    list-style-type: none;
+}
+
+.formItems li {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.form-container h1 {
+    font-size: 2.5rem;
+}
+
+.profileBlock {
+    max-width: 3rem;
+    max-height: 3rem;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    margin-right: 0.5rem;
+}
+
+.profileBlock > img {
+    width: auto;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.font {
+    font: 1.6rem Cambria;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+/* Checkout */
+
+.checkoutSteps {
+    display: flex;
+    justify-content: space-between;
+    width: 40rem;
+    margin: 1rem auto;
+}
+
+.checkoutSteps > div {
+    text-align: center;
+    border-top: 0.5rem gray solid;
+    color: gray;
+    flex: 1 1;
+    padding-top: 1rem;
+}
+
+.checkoutSteps > div.active {
+    border-top: 0.5rem cornflowerblue solid;
+    color: cornflowerblue;
+}
+
+.flexToStart {
+    align-items: flex-start;
+}
+
+/*FinalRent*/
+.myRent{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+    justify-content: space-between;
+}
+.myRent h2{
+    margin: 0;
+    padding-bottom: 1rem;
+    font-size: 2rem;
+}
+.order .rentListContainer{
+    padding: 0;
+}
+.myRentInfo{
+    flex: 3 1 60rem;
+}
+.myRentInfo > div:first-child{
+    margin-top: 0;
+}
+.myRentInfo > div > div {
+    padding: 1rem;
+}
+.myRentInfo > div{
+    border: 0.1rem gray solid;
+    border-radius: 0.5rem;
+    background-color: whitesmoke;
+    padding: 1rem;
+    margin: 1rem;
+}
+.leaseAction{
+    flex: 1 1 20rem;
+    border: 0.1rem gray solid;
+    border-radius: 0.5rem;
+    background-color: whitesmoke;
+    padding: 1rem;
+}
+.leaseAction > ul {
+    padding: 0;
+    list-style-type: none;
+}
+.leaseAction li{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+.leaseAction .total {
+    font-weight: bold;
+    color: deepskyblue;
+}
+
+/*History Lease and Profile*/
+.profile{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.profileInfo {
+    flex: 1 1 20rem;
+}
+.profileLease{
+    flex: 3 1 60rem;
+    margin-left: 1rem;
+}
+table{
+    width: 100%;
+}
+th{
+    text-align: left;
+}
+tbody > tr:nth-child(odd){
+    background-color: lightgray;
+}
+td{
+    padding: 0.5rem;
+}
+
+.dashboard {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+}
+.dashboard h1{
+    font-size: 3rem;
+    margin: 1rem 0;
+}
+.dashboardMenu ul{
+    padding: 0;
+}
+.dashboardMenu{
+    flex: 1 1 20rem;
+    background-color: lightgray;
+}
+.dashboardMenu a{
+    display: flex;
+    padding: 1rem;
+    padding-left: 2rem;
+    justify-content: space-between;
+    color: #221f1f;
+}
+.dashboardMenu a:hover{
+    background-color: wheat;
+}
+.dashboardMenu li.selected a{
+    background-color: sandybrown;
+    color: #221f1f;
+}
+.dashboardContent{
+    flex: 4 1 80rem;
+    color: cornflowerblue;
+    padding: 1rem;
+}
+
+.apartmentsList button{
+    font-size: 1.3rem;
+    margin: 0.5rem;
+    padding: 0.5rem;
+}
+.trAction{
+    width: 10rem;
+}
+.editButton{
+    background-color: lightgreen;
+}
+.deleteButton{
+    font-size: 1.3rem;
+    background-color: #c60500;
+}
+.viewButton{
+    background-color: powderblue;
+}
+.warningButton{
+    background-color: yellow;
+}
+.deleteScreenButtons {
+    text-align: center;
+    font-size: 1.3rem;
+}
+.navigationAdmin{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.summaryItems {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+}
+.summaryItems > li {
+    border: 0.1rem #c0c0c0 solid;
+    margin: 2rem;
+    border-radius: 0.5rem;
+    flex: 1 1 20rem;
+}
+
+.summaryTitle {
+    color: black;
+    background-color: lightskyblue;
+    font-size: 2rem;
+    padding: 1rem;
+}
+.summaryBody {
+    font-size: 3rem;
+    padding: 1rem;
+    text-align: center;
+}
+.summaryTitle.color1{
+    background-color: lightcoral;
+}
+.summaryTitle.color2{
+    background-color: lightskyblue;
+}
+.summaryTitle.color3{
+    background-color: mediumspringgreen;
+}
+.charts {
+    display: flex;
+    justify-content: space-between;
+}
+.charts > div {
+    flex: 1;
+}
+.ct-label {
+    font-size: 15px;
+}
+.m {
+    margin: 0.5rem;
+    font-size: 1.3rem;
+}
+
+/* Search */
+.search {
+    width: 40%;
+}
+
+form.searchForm input[type='text'] {
+    float: left;
+    width: 40%;
+    border-right: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+form.searchForm button {
+    float: left;
+    width: 40px;
+    background: coral;
+    border-left: none;
+    cursor: pointer;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+form.searchForm select {
+    float: left;
+    height: 43px;
+    background: sandybrown;
+    cursor: pointer;
+    border: 2px solid black;
+}
+
+form.searchForm button:hover {
+    background: #0b7dda;
+}
+
+form.searchForm::after {
+    content: '';
+    clear: both;
+    display: table;
+}
+.searchDiv{
+    width: 100%;
+}
+.searchDiv > form{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+.searchDiv{
+    flex-wrap: wrap;
+    flex: 4 1 1rem;
+}
+.Filter {
+    margin: 1rem;
+    background-color: #f0f0f0;
+}
+.nameFilter, .parametersFilter{
+    margin: 0.5rem;
+}
+.nameFilter h4{
+    font-size: 2rem;
+    color: olivedrab;
+}
+.parametersFilter > div{
+    display: flex;
+    align-items: center;
+}
+.parametersFilter input{
+    margin: 0.5rem;
+}
+.parametersFilter label{
+    float: left;
+}
+#to, #for{
+    border: 2px solid black;
+    border-radius: 0;
+}
+.space-around{
+    display: flex;
+}
+aside {
+    position: fixed;
+    width: 30rem;
+    background-color: #ffffff;
+    height: 100%;
+    z-index: 1;
+    transform: translateX(-30.1rem);
+    transition: all 0.5s;
+    border-right: 0.1rem #808080 solid;
+}
+aside.open {
+    transform: translateX(0);
+}
+.aside-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0.5rem 1rem 2rem;
+    color: #808080;
+}
+
+.aside-close-button {
+    width: 3rem;
+    height: 3rem;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0;
+}
+ul.categories {
+    padding: 0;
+}
+.categories > li {
+    list-style-type: none;
+}
+.categories > li > a {
+    display: flex;
+    padding: 1rem;
+    padding-left: 2rem;
+    justify-content: space-between;
+}
+.categories > li > a > span {
+    font-size: 1.4rem;
+    color: #808080;
+}
+.categories > li > a:hover span {
+    color: #444444;
+}
+.categories > li > a:hover {
+    background-color: #f0f0f0;
+    color: #444444;
+}
+
+.brand button {
+    font-size: 3rem;
+    padding: 0.5rem;
+    background: none;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+}
+.bar{
+    background-color: #221f1f;
+    border: 2px solid #221f1f;
+    color: white;
+}
+.reviews{
+    list-style-type: none;
+    padding: 0;
+}
+.review li {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+}
+.homeScreenContainer{
+    display: flex;
+    flex-wrap: wrap;
+}
+.filterDiv{
+    flex: 1 1 10rem;
+}
+.homeScreen{
+    flex: 2 4 150rem;
+}
+.homeScreenFilter {
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+.homeScreenFilter h4{
+    font-size: 1.5rem;
+}
+.homeScreenFilter input{
+    height: 3rem;
+}
+.notFound{
+    font-size: 3rem;
+    color: #0b7dda;
+}
+.hiddenElement{
+    display: none;
+}
+.visibleElement{
+    display: block;
+}
+.infoApartmentA {
+    color: orange;
+}
+.dangerColor{
+    color: red;
+}
+.successColor{
+    color: green;
+}
